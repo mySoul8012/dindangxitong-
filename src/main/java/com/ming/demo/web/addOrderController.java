@@ -3,6 +3,8 @@ package com.ming.demo.web;
 import com.ming.demo.mapper.OrderMapper;
 import com.ming.demo.mapper.UserMapper;
 import com.ming.demo.model.Order;
+import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -11,6 +13,7 @@ import javax.servlet.http.HttpSession;
 import java.util.List;
 
 // 订单控制器
+@Api(tags = "订单控制")
 @RestController
 public class addOrderController {
 
@@ -21,6 +24,7 @@ public class addOrderController {
     private OrderMapper orderMapper;
 
     // 获取当前用户分类下的所有的订单
+    @ApiOperation("获取当前用户分类下的所有的订单")
     @RequestMapping("/findAllOrder")
     public List<Order> findOrderAll(HttpSession httpSession){
         // 获取当前用户分类下的所有的订单

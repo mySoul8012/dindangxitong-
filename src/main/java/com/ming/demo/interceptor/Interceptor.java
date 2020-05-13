@@ -14,7 +14,7 @@ public class Interceptor implements HandlerInterceptor {
         // 进行判断
         if(user == null){
             request.setAttribute("msg", "没有权限请先登录");
-            request.getRequestDispatcher("/index.html").forward(request, response);
+            request.getRequestDispatcher("/login").forward(request, response);
             return false;
         }else{
             return true;

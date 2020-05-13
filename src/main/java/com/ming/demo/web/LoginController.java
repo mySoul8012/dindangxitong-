@@ -3,12 +3,16 @@ package com.ming.demo.web;
 import com.ming.demo.bean.Result;
 import com.ming.demo.mapper.UserMapper;
 import com.ming.demo.model.User;
+import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiOperation;
+import io.swagger.annotations.ApiParam;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import javax.servlet.http.HttpSession;
 
 // 登录控制器，用于进行登录注册
 @RestController
+@Api("登录控制器")
 public class LoginController {
 
     @Autowired
@@ -16,7 +20,8 @@ public class LoginController {
 
 
     @RequestMapping("/login")
-    public Result login(@RequestParam("username")String username, @RequestParam("password")String password, HttpSession httpSession){
+    @ApiOperation("登录")
+    public Result login(@ApiParam(name = "用户名", example = "ming") @RequestParam("username")String username, @ApiParam(name="password", example = "111111")@RequestParam("password")String password, HttpSession httpSession){
         // 获取到用户密码
         String password1 = userMapper.getPassword(username);
         // 获取到用户id
@@ -39,6 +44,7 @@ public class LoginController {
 
     // 打印出session
     @RequestMapping("/getSession")
+    @ApiOperation("打印出session")
     public Result getSession(HttpSession httpSession){
         Object res = httpSession.getAttribute("login");
         Result result = new Result();
@@ -48,6 +54,7 @@ public class LoginController {
 
     // 注册
     @PostMapping("/addUser")
+    @ApiOperation(value = "注册", response = User.class)
     public Result addUser(User user){
         // 添加User
         int res = userMapper.insertPassword(user);
