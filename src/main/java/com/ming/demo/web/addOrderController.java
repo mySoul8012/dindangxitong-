@@ -13,7 +13,7 @@ import javax.servlet.http.HttpSession;
 import java.util.List;
 
 // 订单控制器
-@Api(tags = "订单控制")
+@Api(tags = "订单")
 @RestController
 public class addOrderController {
 
@@ -24,8 +24,8 @@ public class addOrderController {
     private OrderMapper orderMapper;
 
     // 获取当前用户分类下的所有的订单
-    @ApiOperation("获取当前用户分类下的所有的订单")
     @RequestMapping("/findAllOrder")
+    @ApiOperation("获取当前用户分类下的所有的订单")
     public List<Order> findOrderAll(HttpSession httpSession){
         // 获取当前用户分类下的所有的订单
         // 获取当前用户id
@@ -35,5 +35,11 @@ public class addOrderController {
 
         // 查询分类的所有订单
         return orderMapper.findAllListOrder(attributionCategoryId);
+    }
+
+    @RequestMapping("/test")
+    @ApiOperation("/测试")
+    public String test(){
+        return "test";
     }
 }

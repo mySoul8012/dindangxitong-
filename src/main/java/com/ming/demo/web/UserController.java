@@ -14,7 +14,7 @@ import javax.servlet.http.HttpSession;
 import java.util.List;
 
 @RestController
-@Api("用户测试接口")
+@Api(tags = "用户测试接口")
 public class UserController {
 
     @Autowired

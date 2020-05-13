@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.List;
 
 // 分类控制器
-@Api("分类控制器")
+@Api(tags = "分类控制器")
 @RestController
 public class ClassificationController {
     @Autowired

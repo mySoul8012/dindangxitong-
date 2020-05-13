@@ -7,7 +7,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
-@Api("测试")
+@Api(tags = "测试")
 public class MingController {
     @RequestMapping("/index")
     @ApiOperation("index")

@@ -12,7 +12,7 @@ import javax.servlet.http.HttpSession;
 
 // 登录控制器，用于进行登录注册
 @RestController
-@Api("登录控制器")
+@Api(tags = "登录控制器")
 public class LoginController {
 
     @Autowired
