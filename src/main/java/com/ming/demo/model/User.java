@@ -10,6 +10,15 @@ public class User {
     private int attributionCategoryId;
     private String comments;
     private String status;
+    private String imgUrl;
+
+    public String getImgUrl() {
+        return imgUrl;
+    }
+
+    public void setImgUrl(String imgUrl) {
+        this.imgUrl = imgUrl;
+    }
 
     public int getId() {
         return id;

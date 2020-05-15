@@ -8,6 +8,8 @@ import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiParam;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
+import springfox.documentation.annotations.ApiIgnore;
+
 import javax.servlet.http.HttpSession;
 
 // 登录控制器，用于进行登录注册
@@ -21,7 +23,7 @@ public class LoginController {
 
     @RequestMapping("/login")
     @ApiOperation("登录")
-    public Result login(@ApiParam(name = "用户名", example = "ming") @RequestParam("username")String username, @ApiParam(name="password", example = "111111")@RequestParam("password")String password, HttpSession httpSession){
+    public Result login(@ApiParam(name = "用户名", example = "ming") @RequestParam("username")String username, @ApiParam(name="密码", example = "111111")@RequestParam("password")String password, @ApiIgnore HttpSession httpSession){
         // 获取到用户密码
         String password1 = userMapper.getPassword(username);
         // 获取到用户id
@@ -43,7 +45,7 @@ public class LoginController {
     }
 
     // 打印出session
-    @RequestMapping("/getSession")
+    @GetMapping("/getSession")
     @ApiOperation("打印出session")
     public Result getSession(HttpSession httpSession){
         Object res = httpSession.getAttribute("login");

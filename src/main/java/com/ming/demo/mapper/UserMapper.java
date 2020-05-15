@@ -26,4 +26,12 @@ public interface UserMapper {
     // 获取到用户分类
     @Select("select attributionCategoryId from user where id =  #{username}")
     String getAttributionCategoryId(@Param("username")String username);
+
+    // 根据用户id，查询相关的用户头像
+    @Select("select imgUrl from user where id =  #{username}")
+    String getIdImgUrl(@Param("username")String username);
+
+    // 根据用户id，查询出用户
+    @Select("select * from user where id = #{username}")
+    User getIdUser(@Param("username")String id);
 }
