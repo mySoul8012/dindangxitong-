@@ -1,0 +1,25 @@
+mybatis:
+  type-aliases-package: com.ming.demo.model
+spring:
+  datasource:
+    url: jdbc:mysql://cdb-1yfd1mlm.cd.tencentcdb.com:10056/dindangci
+    username: root
+    password: ABCcba20170607
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  mvc:
+    view:
+      prefix: classpath:/templates/
+      suffix: .html
+    static-path-pattern: /static/**
+swagger:
+  base-path: /**
+  base-package: 'com.ming'
+  title: 'spring-boot-swagger-demo'
+  description: '����Swagger������SpringBoot RESTApi �ĵ�'
+  version: '1.0'
+  contact:
+    name: '��ҹ'
+    url: 'http://www.iming.info'
+    email: 'mingming@mingming.email'
+server:
+  port: 8024
