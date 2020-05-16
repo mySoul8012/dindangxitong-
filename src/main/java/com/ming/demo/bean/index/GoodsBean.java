@@ -7,6 +7,15 @@ public class GoodsBean {
     private String commodityPrice;
     private String categoryName;
     private String categorySubName;
+    private String imgUrl;
+
+    public String getImgUrl() {
+        return imgUrl;
+    }
+
+    public void setImgUrl(String imgUrl) {
+        this.imgUrl = imgUrl;
+    }
 
     public String getId() {
         return id;

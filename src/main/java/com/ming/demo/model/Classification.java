@@ -12,6 +12,15 @@ public class Classification {
     private String notes;
     private String status;
     private String imgUrl;
+    private String parentCategory;
+
+    public String getParentCategory() {
+        return parentCategory;
+    }
+
+    public void setParentCategory(String parentCategory) {
+        this.parentCategory = parentCategory;
+    }
 
     public String getImgUrl() {
         return imgUrl;

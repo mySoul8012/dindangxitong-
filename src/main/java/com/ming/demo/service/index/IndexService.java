@@ -23,8 +23,13 @@ public class IndexService {
     @Autowired
     private ClassificationMapper classificationMapper;
 
+    // 获取总分类
+    public List<Classification> findAllMain(){
+        return classificationMapper.findAllMain();
+    }
 
-    // 查询所有商品
+
+    // 查询所有的商品
     public List<Goods> getAllGoods(){
         return goodsMapper.getAllGoods();
     }
@@ -35,17 +40,23 @@ public class IndexService {
         List<Integer> integerList = dailyGradMapper.getGoodsId();
         List<Goods> goodsList = new ArrayList<>();
         // 进行遍历
+        // 添加计数
+        int count = 0;
         for (Integer integer : integerList) {
             // 查询商品
+            count++;
             Goods goods = goodsMapper.getGood(integer + "");
             goodsList.add(goods);
+            if(count == 5){
+                break;
+            }
         }
         return goodsList;
     }
 
     public List<GoodsBean> getGoodsBean(){
         // 获取全部商品
-        List<Goods> goodsList = goodsMapper.getAllGoods();
+        List<Goods> goodsList = goodsMapper.getAllGoods3();
         List<GoodsBean> goodsBeans = new ArrayList<>();
         // 进行遍历填充到分类
         for (Goods goods : goodsList) {
@@ -55,6 +66,7 @@ public class IndexService {
             goodsBean.setTitle(goods.getName());
             goodsBean.setSubTitle(goods.getSubtitle());
             goodsBean.setCommodityPrice(goods.getCommodityPrice());
+            goodsBean.setImgUrl(goods.getImgUrl());
             // 获取到分类id
             String category = goods.getClassification();
             // 根据分类id，查询相关的名称
@@ -63,5 +75,10 @@ public class IndexService {
             goodsBeans.add(goodsBean);
         }
         return goodsBeans;
+    }
+
+    // 获取到首页商品四条数据。
+    public List<Goods> CommodityBox(){
+        return goodsMapper.getAllGoods4();
     }
 }

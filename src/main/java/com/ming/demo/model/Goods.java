@@ -27,6 +27,33 @@ public class Goods {
     private String evaluationld;
     @ApiModelProperty(value = "备注", example = "备注信息")
     private String notes;
+    private String time;
+    private String label;
+    private String discountPrice;
+
+    public String getTime() {
+        return time;
+    }
+
+    public void setTime(String time) {
+        this.time = time;
+    }
+
+    public String getLabel() {
+        return label;
+    }
+
+    public void setLabel(String label) {
+        this.label = label;
+    }
+
+    public String getDiscountPrice() {
+        return discountPrice;
+    }
+
+    public void setDiscountPrice(String discountPrice) {
+        this.discountPrice = discountPrice;
+    }
 
     public int getId() {
         return id;
