@@ -10,7 +10,24 @@ public class Evaluation {
     private String status;
     private String goodsId;
     private String time;
+    private String category;
+    private String isImg;
 
+    public String getIsImg() {
+        return isImg;
+    }
+
+    public void setIsImg(String isImg) {
+        this.isImg = isImg;
+    }
+
+    public String getCategory() {
+        return category;
+    }
+
+    public void setCategory(String category) {
+        this.category = category;
+    }
 
     public String getTime() {
         return time;

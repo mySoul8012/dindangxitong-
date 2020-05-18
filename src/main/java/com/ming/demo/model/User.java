@@ -11,6 +11,16 @@ public class User {
     private String comments;
     private String status;
     private String imgUrl;
+    // 是否是VIP
+    private String isItVip;
+
+    public String getIsItVip() {
+        return isItVip;
+    }
+
+    public void setIsItVip(String isItVip) {
+        this.isItVip = isItVip;
+    }
 
     public String getImgUrl() {
         return imgUrl;

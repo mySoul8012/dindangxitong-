@@ -30,6 +30,24 @@ public class Goods {
     private String time;
     private String label;
     private String discountPrice;
+    private String merchantServices;
+    private String sales;
+
+    public String getMerchantServices() {
+        return merchantServices;
+    }
+
+    public void setMerchantServices(String merchantServices) {
+        this.merchantServices = merchantServices;
+    }
+
+    public String getSales() {
+        return sales;
+    }
+
+    public void setSales(String sales) {
+        this.sales = sales;
+    }
 
     public String getTime() {
         return time;

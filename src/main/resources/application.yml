@@ -23,3 +23,7 @@ swagger:
     email: 'mingming@mingming.email'
 server:
   port: 8024
+
+logging:
+  level:
+    com.simons.cn.springbootdemo.dao.system: debug
