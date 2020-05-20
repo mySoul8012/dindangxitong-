@@ -2,6 +2,7 @@ package com.ming.demo.web.search;
 
 import com.ming.demo.model.Goods;
 import com.ming.demo.service.search.SearchService;
+import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -11,6 +12,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/search")
+@ApiOperation("搜索类")
 public class SeasrchController {
     @Autowired
     private SearchService searchService;
@@ -27,6 +29,7 @@ public class SeasrchController {
     // 所属分类  category 默认 0  不筛选 否则传入分类id
     // 页数 pageNo
     // 页面数据大小 size
+    @ApiOperation("搜索列表")
     @RequestMapping("/searchList")
     public List<Goods> searchList(String keyWorld,
                                   @RequestParam(defaultValue = "1") String Sort,

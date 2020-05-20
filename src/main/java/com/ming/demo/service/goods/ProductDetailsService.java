@@ -44,6 +44,7 @@ public class ProductDetailsService {
         goodsIndexBean.setSales(goods.getSales());
         goodsIndexBean.setDetails(goods.getDetails());
         goodsIndexBean.setCountValuation(evaluationList.size() + "");
+        goodsIndexBean.setImgUrl(goods.getImgUrl());
         // 获取前三条评价
         List<Valuation> valuationList = new ArrayList<>();
         // 进行遍历

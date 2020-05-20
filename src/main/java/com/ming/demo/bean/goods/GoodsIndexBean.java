@@ -3,6 +3,8 @@ package com.ming.demo.bean.goods;
 import java.util.List;
 
 public class GoodsIndexBean {
+    // 轮播图
+    private String imgUrl;
     // 商品id
     private String id;
     // 商品价格
@@ -21,6 +23,14 @@ public class GoodsIndexBean {
     private List<Valuation> valuations;
     // 该商品评价总条数
     private String countValuation;
+
+    public String getImgUrl() {
+        return imgUrl;
+    }
+
+    public void setImgUrl(String imgUrl) {
+        this.imgUrl = imgUrl;
+    }
 
     public String getId() {
         return id;
