@@ -18,8 +18,8 @@ import javax.servlet.http.HttpSession;
 import java.util.List;
 
 // 订单控制器
-@Api(tags = "订单")
 @RestController
+@Deprecated
 public class addOrderController {
 
     @Autowired

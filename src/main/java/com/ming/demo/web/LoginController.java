@@ -14,7 +14,7 @@ import javax.servlet.http.HttpSession;
 
 // 登录控制器，用于进行登录注册
 @RestController
-@Api(tags = "登录控制器")
+@Deprecated
 public class LoginController {
 
     @Autowired

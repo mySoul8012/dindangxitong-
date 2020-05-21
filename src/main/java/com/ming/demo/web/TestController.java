@@ -5,6 +5,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
+@Deprecated
 public class TestController {
     @RequestMapping("/mingming")
     public Result result(){

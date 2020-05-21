@@ -14,7 +14,7 @@ import javax.servlet.http.HttpSession;
 import java.util.List;
 
 @RestController
-@Api(tags = "用户测试接口")
+@Deprecated
 public class UserController {
 
     @Autowired

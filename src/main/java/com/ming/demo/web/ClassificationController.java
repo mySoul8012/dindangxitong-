@@ -14,8 +14,8 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.List;
 
 // 分类控制器
-@Api(tags = "分类控制器")
 @RestController
+@Deprecated
 public class ClassificationController {
     @Autowired
     private ClassificationMapper classification1;

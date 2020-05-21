@@ -13,6 +13,24 @@ public class User {
     private String imgUrl;
     // 是否是VIP
     private String isItVip;
+    private String card;
+    private String coupon;
+
+    public String getCard() {
+        return card;
+    }
+
+    public void setCard(String card) {
+        this.card = card;
+    }
+
+    public String getCoupon() {
+        return coupon;
+    }
+
+    public void setCoupon(String coupon) {
+        this.coupon = coupon;
+    }
 
     public String getIsItVip() {
         return isItVip;

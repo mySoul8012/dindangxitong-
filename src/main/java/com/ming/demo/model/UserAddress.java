@@ -8,6 +8,34 @@ public class UserAddress {
     private String remarks;
     private String isDefault;
 
+    private String phone;
+    private String sex; // 1 男  2 女
+    private String label;   // 标签label
+
+    public String getPhone() {
+        return phone;
+    }
+
+    public void setPhone(String phone) {
+        this.phone = phone;
+    }
+
+    public String getSex() {
+        return sex;
+    }
+
+    public void setSex(String sex) {
+        this.sex = sex;
+    }
+
+    public String getLabel() {
+        return label;
+    }
+
+    public void setLabel(String label) {
+        this.label = label;
+    }
+
     public String getAddress() {
         return address;
     }

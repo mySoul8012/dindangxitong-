@@ -5,6 +5,7 @@ import com.ming.demo.bean.evaluation.EvaluationListBean;
 import com.ming.demo.service.evaluation.EvaluationServiceEvaluation;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
+import io.swagger.annotations.ApiParam;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -25,7 +26,7 @@ public class EvaluationController {
     // 数量
     @ApiOperation("评论数量")
     @RequestMapping("/evaluationCount")
-    public EvaluationCountBean evaluationCount(String id){
+    public EvaluationCountBean evaluationCount(@ApiParam(name = "商品id") String id){
         return evaluationServiceEvaluation.evaluationCountBean(id);
     }
 
@@ -41,11 +42,11 @@ public class EvaluationController {
     // PageNo 第几页
     @RequestMapping("/evaluationList")
     @ApiOperation("评论列表")
-    public List<EvaluationListBean> evaluationList(String id,
-                                                   @RequestParam(defaultValue = "1")String sort,
-                                                   @RequestParam(defaultValue = "0")String isImg,
-                                                   @RequestParam(defaultValue = "0")int pageNo,
-                                                   @RequestParam(defaultValue = "5")int size){
+    public List<EvaluationListBean> evaluationList(@ApiParam(name = "id") String id,
+                                                   @ApiParam(name = "sort")@RequestParam(defaultValue = "1")String sort,
+                                                   @ApiParam(name = "isImg")@RequestParam(defaultValue = "0")String isImg,
+                                                   @ApiParam(name = "pageNo")@RequestParam(defaultValue = "0")int pageNo,
+                                                   @ApiParam(name = "size")@RequestParam(defaultValue = "5")int size){
         return evaluationServiceEvaluation.evaluationListBean(id, sort, isImg, pageNo, size);
     }
 }

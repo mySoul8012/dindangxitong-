@@ -32,6 +32,15 @@ public class Goods {
     private String discountPrice;
     private String merchantServices;
     private String sales;
+    private String business;
+
+    public String getBusiness() {
+        return business;
+    }
+
+    public void setBusiness(String business) {
+        this.business = business;
+    }
 
     public String getMerchantServices() {
         return merchantServices;

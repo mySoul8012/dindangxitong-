@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
-@Api(tags = "测试")
+@Deprecated
 public class MingController {
     @GetMapping("/index")
     @ApiOperation("index")

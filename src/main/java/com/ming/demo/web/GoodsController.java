@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@Api(tags = "商品")
+@Deprecated
 public class GoodsController {
     @Autowired
     private GoodsService goodsService;
