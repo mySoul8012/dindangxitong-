@@ -8,6 +8,60 @@ public class Order {
     private String status;
     private String category;
     private String remarks;
+    private String serviceHours;
+    private String price;
+    private String orderCreatorId;
+    private String serviceTime;
+    private String shoopId;
+    private String createTime;
+
+    public String getCreateTime() {
+        return createTime;
+    }
+
+    public void setCreateTime(String createTime) {
+        this.createTime = createTime;
+    }
+
+    public String getShoopId() {
+        return shoopId;
+    }
+
+    public void setShoopId(String shoopId) {
+        this.shoopId = shoopId;
+    }
+
+    public String getServiceTime() {
+        return serviceTime;
+    }
+
+    public void setServiceTime(String serviceTime) {
+        this.serviceTime = serviceTime;
+    }
+
+    public String getOrderCreatorId() {
+        return orderCreatorId;
+    }
+
+    public void setOrderCreatorId(String orderCreatorId) {
+        this.orderCreatorId = orderCreatorId;
+    }
+
+    public String getPrice() {
+        return price;
+    }
+
+    public void setPrice(String price) {
+        this.price = price;
+    }
+
+    public String getServiceHours() {
+        return serviceHours;
+    }
+
+    public void setServiceHours(String serviceHours) {
+        this.serviceHours = serviceHours;
+    }
 
     public int getId() {
         return id;

@@ -7,7 +7,6 @@ public class UserAddress {
     private String states;
     private String remarks;
     private String isDefault;
-
     private String phone;
     private String sex; // 1 男  2 女
     private String label;   // 标签label

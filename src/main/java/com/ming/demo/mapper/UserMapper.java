@@ -1,9 +1,11 @@
 package com.ming.demo.mapper;
 
+import com.ming.demo.model.Order;
 import com.ming.demo.model.User;
 import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Param;
 import org.apache.ibatis.annotations.Select;
+import org.apache.ibatis.annotations.Update;
 
 import java.util.List;
 
@@ -34,4 +36,10 @@ public interface UserMapper {
     // 根据用户id，查询出用户
     @Select("select * from user where id = #{username}")
     User getIdUser(@Param("username")String id);
+
+    @Select("select * from `order` where status = 1")
+    List<Order> getUnpaidOrder();
+
+    @Update("update `order` set status = 2 where id = #{id}")
+    int updateStates(@Param("id")int id);
 }

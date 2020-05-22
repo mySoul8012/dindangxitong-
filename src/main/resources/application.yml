@@ -11,6 +11,18 @@ spring:
       prefix: classpath:/templates/
       suffix: .html
     static-path-pattern: /static/**
+  redis:
+    database: 0
+    host: 139.199.225.229
+    port: 6379
+    password: 12345678
+    timeout: 0
+    pool:
+      max-active: 8
+      max-wait: -1
+      max-idle: 8
+      min-idle: 0
+
 swagger:
   base-path: /**
   base-package: 'com.ming'
@@ -27,3 +39,11 @@ server:
 logging:
   level:
     com.simons.cn.springbootdemo.dao.system: debug
+
+pagehelper:
+  # 数据库方言
+  helper-dialect: mysql
+  # 判断合理性比如负数和超过最大总数
+  reasonable: true
+  # 支持方法参数
+  support-methods-arguments: true

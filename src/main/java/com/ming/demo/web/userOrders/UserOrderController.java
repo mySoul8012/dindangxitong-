@@ -40,7 +40,7 @@ public class UserOrderController {
 
     // 读取全部订单地址
     @RequestMapping("/getAllUserAddress")
-    public List<UserAddress> getAllUserAddress(String userId){
+    public List<com.ming.demo.bean.address.UserAddress> getAllUserAddress(String userId){
         // 读取全部订单地址
         return userOrdersService.getUserAddress(userId);
     }
@@ -71,5 +71,11 @@ public class UserOrderController {
     public Shop getOwningBusiness(String id){
         // 进行查询
         return userOrdersService.getOwningBusiness(id);
+    }
+
+    @RequestMapping("/insertInToOrder")
+    public Result insertInToOrder(Order order){
+        // 进行增加
+        return userOrdersService.insertInToOrder(order);
     }
 }

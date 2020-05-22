@@ -4,6 +4,7 @@ C:\Users\Administrator\Desktop\dindangxitong-\src\main\java\com\ming\demo\interc
 C:\Users\Administrator\Desktop\dindangxitong-\src\main\java\com\ming\demo\web\addOrderController.java
 C:\Users\Administrator\Desktop\dindangxitong-\src\main\java\com\ming\demo\model\User.java
 C:\Users\Administrator\Desktop\dindangxitong-\src\main\java\com\ming\demo\web\goods\GoodsListController.java
+C:\Users\Administrator\Desktop\dindangxitong-\src\main\java\com\ming\demo\bean\address\UserAddress.java
 C:\Users\Administrator\Desktop\dindangxitong-\src\main\java\com\ming\demo\DemoApplication.java
 C:\Users\Administrator\Desktop\dindangxitong-\src\main\java\com\ming\demo\bean\GoodsBean.java
 C:\Users\Administrator\Desktop\dindangxitong-\src\main\java\com\ming\demo\service\search\SearchService.java
@@ -35,6 +36,7 @@ C:\Users\Administrator\Desktop\dindangxitong-\src\main\java\com\ming\demo\bean\R
 C:\Users\Administrator\Desktop\dindangxitong-\src\main\java\com\ming\demo\mapper\shop\ShopMapper.java
 C:\Users\Administrator\Desktop\dindangxitong-\src\main\java\com\ming\demo\service\EvaluationService.java
 C:\Users\Administrator\Desktop\dindangxitong-\src\main\java\com\ming\demo\service\userOrders\UserOrdersService.java
+C:\Users\Administrator\Desktop\dindangxitong-\src\main\java\com\ming\demo\quartz\Quartz.java
 C:\Users\Administrator\Desktop\dindangxitong-\src\main\java\com\ming\demo\web\evaluation\EvaluationController.java
 C:\Users\Administrator\Desktop\dindangxitong-\src\main\java\com\ming\demo\service\GoodsService.java
 C:\Users\Administrator\Desktop\dindangxitong-\src\main\java\com\ming\demo\bean\EvaluationBean.java
