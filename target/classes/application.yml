@@ -6,6 +6,21 @@ spring:
     username: root
     password: ABCcba20170607
     driver-class-name: com.mysql.cj.jdbc.Driver
+    druid:
+      initial-size: 5
+      max-active: 30
+      min-idle: 5
+      max-wait: 60000
+      time-between-eviction-runs-millis: 60000
+      min-evictable-idle-time-millis: 300000
+      validation-query: SELECT 1 FROM DUAL
+      test-while-idle: true
+      test-on-borrow: false
+      test-on-return: false
+      pool-prepared-statements: false
+      max-pool-prepared-statement-per-connection-size: 50
+      filters: stat, wall
+      use-global-data-source-stat: true
   mvc:
     view:
       prefix: classpath:/templates/
@@ -34,7 +49,7 @@ swagger:
     url: 'http://www.iming.info'
     email: 'mingming@mingming.email'
 server:
-  port: 8024
+  port: 8025
 
 logging:
   level:
@@ -47,3 +62,14 @@ pagehelper:
   reasonable: true
   # 支持方法参数
   support-methods-arguments: true
+
+##jwt配置
+audience:
+  # 代表这个JWT的接收对象,存入audience
+  clientId: 098f6bcd4621d373cade4e832627b4f6
+  # 密钥, 经过Base64加密, 可自行替换
+  base64Secret: MDk4ZjZiY2Q0NjIxZDM3M2NhZGU0ZTgzMjYyN2I0ZjY=
+  # JWT的签发主体，存入issuer
+  name: restapiuser
+  # 过期时间，时间戳
+  expiresSecond: 172800

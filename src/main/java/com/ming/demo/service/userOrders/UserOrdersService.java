@@ -8,6 +8,7 @@ import com.ming.demo.mapper.UserMapper;
 import com.ming.demo.mapper.card.CardMapper;
 import com.ming.demo.mapper.coupon.CouponMapper;
 import com.ming.demo.mapper.goods.GoodsMapperGoods;
+import com.ming.demo.mapper.operatings.OperatingsMapper;
 import com.ming.demo.mapper.shop.ShopMapper;
 import com.ming.demo.model.*;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,7 +18,6 @@ import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
 import java.text.ParseException;
-import java.text.ParsePosition;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
@@ -47,6 +47,9 @@ public class UserOrdersService {
 
     @Autowired
     private UserMapper userMapper;
+
+    @Autowired
+    private OperatingsMapper operatingsMapper;
 
     @Resource(name="stringRedisTemplate")
     ValueOperations<String, String> valOpsStr;
@@ -150,12 +153,22 @@ public class UserOrdersService {
         // 设置锁的过期时间
         stringRedisTemplate.expire("key", 30000, TimeUnit.MILLISECONDS);
         // 减少库存
-        userAddressMapper.updateStockGoods(order.getShoopId());
+        int stockLine = userAddressMapper.updateStockGoods(order.getShoopId());
+        // 查询剩余库存
+        int resStock = Integer.parseInt(goodsMapperGoods.getGood(order.getShoopId()).getStock());
+        if(resStock < 0){
+            // 已经卖完
+            // 库存修改为0
+            userAddressMapper.updateStock0Goods(order.getShoopId());
+            Result result = new Result();
+            result.setMsg("error");
+            return result;
+        }
         // 增加订单
         int res = userAddressMapper.insertInToOrder(order);
         // 释放锁
         stringRedisTemplate.delete("key");
-        if(res == 1){
+        if(res == 1 && stockLine == 1){
             // mapper增加
             Result result = new Result();
             // 添加
@@ -211,6 +224,56 @@ public class UserOrdersService {
                     int res = userMapper.updateStates(order.getId());
                 }
             }
+        }
+    }
+
+    public Result cancelOrder(String id) {
+        int res = userAddressMapper.cancelOrder(id);
+        if(res == 1){
+            Result result = new Result();
+            result.setMsg("success");
+            return result;
+        }else{
+            Result result = new Result();
+            result.setMsg("error");
+            return result;
+        }
+    }
+
+    // 我的服务查询
+    public List<Order> findAllUserOrder(String id, int pageNo, int size) {
+        // 启动分页
+        PageHelper.startPage(pageNo, size);
+        return userAddressMapper.findAllUserOrder(id);
+    }
+
+    public List<Order> findAllToBePaid(String id, String pageNo, String size) {
+        PageHelper.startPage(Integer.parseInt(pageNo), Integer.parseInt(size));
+        return userAddressMapper.findAllToBePaid(id);
+    }
+
+    // 查询待服务
+    public List<Order> findAllToBeServed(String id, int pageNo, int size) {
+        PageHelper.startPage(pageNo, size);
+        return userAddressMapper.findAllToBeServed(id);
+    }
+
+    public List<Order> findAllCompleted(String id, int pageNo, int size) {
+        PageHelper.startPage(pageNo, size);
+        return userAddressMapper.findAllCompleted(id);
+    }
+
+    public List<Operating> operatings(String userId, String orderId) {
+        return operatingsMapper.operatings(userId, orderId);
+    }
+
+    public boolean deleteAddress(String id) {
+        // 进行删除
+        int res = userAddressMapper.deleteAddress(id);
+        if(res == 1){
+            return true;
+        }else{
+            return false;
         }
     }
 }
