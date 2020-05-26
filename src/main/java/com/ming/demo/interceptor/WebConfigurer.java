@@ -12,6 +12,8 @@ public class WebConfigurer implements WebMvcConfigurer{
     @Override
     public void addInterceptors(InterceptorRegistry registry) {
         registry.addInterceptor(new JwtInterceptor()).addPathPatterns("/login/**")
+                .addPathPatterns("/admin/**")
+                .excludePathPatterns("/admin/login")
                 .excludePathPatterns("/login/loginControllerOld")
                 .excludePathPatterns("/login/weichatwxLogin")
                 .excludePathPatterns("/static/**")

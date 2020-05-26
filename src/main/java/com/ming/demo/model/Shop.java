@@ -8,6 +8,15 @@ public class Shop {
     private String notes;
     private String updateTime;
     private String states;
+    private String phone;
+
+    public String getPhone() {
+        return phone;
+    }
+
+    public void setPhone(String phone) {
+        this.phone = phone;
+    }
 
     public int getId() {
         return id;

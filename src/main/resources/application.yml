@@ -49,7 +49,7 @@ swagger:
     url: 'http://www.iming.info'
     email: 'mingming@mingming.email'
 server:
-  port: 8025
+  port: 8024
 
 logging:
   level:

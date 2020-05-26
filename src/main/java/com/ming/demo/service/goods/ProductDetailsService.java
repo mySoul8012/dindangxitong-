@@ -5,8 +5,10 @@ import com.ming.demo.bean.goods.Valuation;
 import com.ming.demo.mapper.goods.EvaluationMapperGoods;
 import com.ming.demo.mapper.goods.GoodsMapperGoods;
 import com.ming.demo.mapper.goods.UserMapperUser;
+import com.ming.demo.mapper.shop.ShopMapper;
 import com.ming.demo.model.Evaluation;
 import com.ming.demo.model.Goods;
+import com.ming.demo.model.Shop;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -25,6 +27,9 @@ public class ProductDetailsService {
 
     @Autowired
     private UserMapperUser userMapperUser;
+
+    @Autowired
+    private ShopMapper shopMapper;
 
     // 获取商品详情页 传入id
     public GoodsIndexBean getGoodsIndexBean(String id){
@@ -74,6 +79,10 @@ public class ProductDetailsService {
             valuationList.add(valuation);
         }
         goodsIndexBean.setValuations(valuationList);
+        // 获取商家信息
+        String bussicns = goods.getBusiness();
+        Shop shop = shopMapper.getShopId(bussicns);
+        goodsIndexBean.setShop(shop);
         return goodsIndexBean;
     }
 }

@@ -42,4 +42,13 @@ public interface UserMapper {
 
     @Update("update `order` set status = 2 where id = #{id}")
     int updateStates(@Param("id")int id);
+
+    @Select("select * from user where name = #{username} limit 1")
+    User getUserName(String username);
+
+    @Insert("insert into user(name, password, time, attributionCategoryId, status) values(#{user.name}, #{user.password}, now(), #{user.attributionCategoryId}, #{user.status})")
+    int insertUser(@Param("user") User user);
+
+    @Update("update user set password = #{session_key} where name = #{openid}")
+    int updatePassword(String session_key, String openid);
 }

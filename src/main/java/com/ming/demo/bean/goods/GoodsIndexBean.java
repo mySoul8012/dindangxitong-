@@ -1,5 +1,7 @@
 package com.ming.demo.bean.goods;
 
+import com.ming.demo.model.Shop;
+
 import java.util.List;
 
 public class GoodsIndexBean {
@@ -23,6 +25,16 @@ public class GoodsIndexBean {
     private List<Valuation> valuations;
     // 该商品评价总条数
     private String countValuation;
+    // 商家电话
+    private Shop shop;
+
+    public Shop getShop() {
+        return shop;
+    }
+
+    public void setShop(Shop shop) {
+        this.shop = shop;
+    }
 
     public String getImgUrl() {
         return imgUrl;

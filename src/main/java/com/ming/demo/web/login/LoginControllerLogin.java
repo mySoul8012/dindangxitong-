@@ -2,6 +2,7 @@ package com.ming.demo.web.login;
 
 import com.ming.demo.bean.Audience;
 import com.ming.demo.bean.Result;
+import com.ming.demo.model.User;
 import com.ming.demo.service.login.LoginService;
 import com.ming.demo.utils.JwtTokenUtil;
 import io.swagger.annotations.Api;
@@ -52,7 +53,12 @@ public class LoginControllerLogin {
     public Result weichatwxLogin(String code){
         System.out.println(code);
         // 这里关系对应如下  openid-username     session_key-password
-        boolean weixinxiaocengxudengnu = loginService.login(code);
+        User weixinxiaocengxudengnu = loginService.login(code);
+        if(weixinxiaocengxudengnu != null){
+            // 已经登录成功，返回JWT。
+            String userId = weixinxiaocengxudengnu.getId() + "";
+
+        }
         Result result = new Result();
         result.setMsg(code);
         return result;
