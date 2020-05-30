@@ -61,29 +61,31 @@ public class UserOrdersService {
     }
 
     // 读取所有的地址
-    public List<com.ming.demo.bean.address.UserAddress> getUserAddress(String id){
+    public List<UserAddress> getUserAddress(String id){
         List<UserAddress> userAddresses = userAddressMapper.getUserAddress(id);
-        List<com.ming.demo.bean.address.UserAddress> userAddressArrayList= new ArrayList<>();
-        System.out.println(userAddressArrayList.size());
-        for (UserAddress userAddress : userAddresses) {
-            // 获取全部内容
-            int usernameId = userAddress.getUsernameId();
-            // 查询名称
-            String userName = userMapper.getIdUser(usernameId + "").getName();
-            com.ming.demo.bean.address.UserAddress userAddress1 = new com.ming.demo.bean.address.UserAddress();
-            userAddress1.setName(userName);
-            userAddress1.setAddress(userAddress.getAddress());
-            userAddress1.setId(userAddress.getId());
-            userAddress1.setIsDefault(userAddress.getIsDefault());
-            userAddress1.setLabel(userAddress.getLabel());
-            userAddress1.setPhone(userAddress.getPhone());
-            userAddress1.setRemarks(userAddress.getRemarks());
-            userAddress1.setSex(userAddress.getSex());
-            userAddress1.setStates(userAddress.getStates());
-            userAddress1.setUsernameId(userAddress.getUsernameId());
-            userAddressArrayList.add(userAddress1);
-        }
-        return userAddressArrayList;
+        //*
+       // List<com.ming.demo.bean.address.UserAddress> userAddressArrayList= new ArrayList<>();
+       // System.out.println(userAddressArrayList.size());
+      //  for (UserAddress userAddress : userAddresses) {
+        //    // 获取全部内容
+        //    int usernameId = userAddress.getUsernameId();
+        //    // 查询名称
+        //    String userName = userMapper.getIdUser(usernameId + "").getName();
+        //    com.ming.demo.bean.address.UserAddress userAddress1 = new com.ming.demo.bean.address.UserAddress();
+        //    userAddress1.setName(userAddress.getRecipient());
+        //    userAddress1.setAddress(userAddress.getAddress());
+        //    userAddress1.setId(userAddress.getId());
+        //    userAddress1.setIsDefault(userAddress.getIsDefault());
+        //    userAddress1.setLabel(userAddress.getLabel());
+       //     userAddress1.setPhone(userAddress.getPhone());
+       //     userAddress1.setRemarks(userAddress.getRemarks());
+       //     userAddress1.setSex(userAddress.getSex());
+        //    userAddress1.setStates(userAddress.getStates());
+       //     userAddress1.setUsernameId(userAddress.getUsernameId());
+       //     userAddressArrayList.add(userAddress1);
+      //  }
+        //
+        return userAddresses;
     }
 
     // 获取该用户下的优惠券

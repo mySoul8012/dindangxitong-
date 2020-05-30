@@ -66,7 +66,7 @@ public class UserOrderController {
     // 读取全部订单地址
     @RequestMapping("/getAllUserAddress")
     @ApiOperation(value = "读取全部订单地址")
-    public List<com.ming.demo.bean.address.UserAddress> getAllUserAddress(String userId){
+    public List<UserAddress> getAllUserAddress(String userId){
         // 读取全部订单地址
         return userOrdersService.getUserAddress(userId);
     }
@@ -107,7 +107,12 @@ public class UserOrderController {
     @ApiOperation("增加新的订单")
     public Result insertInToOrder(Order order){
         // 进行增加
-        return userOrdersService.insertInToOrder(order);
+        try {
+            return userOrdersService.insertInToOrder(order);
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+        return null;
     }
 
     // 取消订单

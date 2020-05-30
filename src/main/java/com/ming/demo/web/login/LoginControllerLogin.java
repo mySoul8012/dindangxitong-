@@ -50,14 +50,16 @@ public class LoginControllerLogin {
 
     // 微信小程序登录
     @RequestMapping("/weichatwxLogin")
-    public Result weichatwxLogin(String code){
+    public Result weichatwxLogin(HttpServletResponse response, String code){
         System.out.println(code);
         // 这里关系对应如下  openid-username     session_key-password
         User weixinxiaocengxudengnu = loginService.login(code);
         if(weixinxiaocengxudengnu != null){
             // 已经登录成功，返回JWT。
             String userId = weixinxiaocengxudengnu.getId() + "";
-
+            String token = JwtTokenUtil.createJWT(userId, weixinxiaocengxudengnu.getName(), "admin", audience);
+            System.out.println("登陆成功" + token);
+            response.setHeader(JwtTokenUtil.AUTH_HEADER_KEY, JwtTokenUtil.TOKEN_PREFIX + token);
         }
         Result result = new Result();
         result.setMsg(code);

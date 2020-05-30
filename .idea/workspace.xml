@@ -19,74 +19,32 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="061a4921-46c8-4055-b9dc-a73fc965d396" name="Default Changelist" comment="1. 完善微信小程序登录功能&#10;2. 添加后台功能">
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/ming/demo/bean/order/OrderDetails.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/ming/demo/mapper/admin/AdminCardMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/ming/demo/mapper/admin/AdminClassificationMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/ming/demo/mapper/admin/AdminCouponMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/ming/demo/mapper/admin/AdminDailyGradMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/ming/demo/mapper/admin/AdminOrderMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/ming/demo/mapper/admin/AdminShopMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/ming/demo/mapper/admin/AdminUserMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/ming/demo/mapper/rider/RiderMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/ming/demo/mapper/rider/RidersTakeOrdersMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/ming/demo/model/Rider.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/ming/demo/service/admin/AdminCardService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/ming/demo/service/admin/AdminClassificationService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/ming/demo/service/admin/AdminDailyGradService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/ming/demo/service/admin/AdminEvaluationService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/ming/demo/service/admin/AdminShopServer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/ming/demo/service/admin/AdminUserService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/ming/demo/service/admin/AminCouponServer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/ming/demo/service/admin/AminOrderServer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/ming/demo/service/rider/RiderService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/ming/demo/web/admin/AdminCardController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/ming/demo/web/admin/AdminClassificationController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/ming/demo/web/admin/AdminCouponController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/ming/demo/web/admin/AdminDailyGradController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/ming/demo/web/admin/AdminEvaluationController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/ming/demo/web/admin/AdminOrderController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/ming/demo/web/admin/AdminShopController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/ming/demo/web/admin/AdminUserController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/ming/demo/web/rider/RiderController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/ming/demo/web/rider/impl/RiderControllerImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/generatorConfig.xml" afterDir="false" />
+    <list default="true" id="061a4921-46c8-4055-b9dc-a73fc965d396" name="Default Changelist" comment="1. 添加骑手端&#10;2. 添加订单详情页">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ming/demo/interceptor/WebConfigurer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ming/demo/interceptor/WebConfigurer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ming/demo/mapper/OrderMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ming/demo/mapper/OrderMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ming/demo/service/OrderService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ming/demo/service/OrderService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ming/demo/mapper/UserAddress/UserAddressMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ming/demo/mapper/UserAddress/UserAddressMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ming/demo/model/UserAddress.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ming/demo/model/UserAddress.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/ming/demo/service/userOrders/UserOrdersService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ming/demo/service/userOrders/UserOrdersService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ming/demo/web/admin/AdminController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ming/demo/web/admin/AdminController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ming/demo/web/admin/AdminGoodsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ming/demo/web/admin/AdminGoodsController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ming/demo/web/login/LoginControllerLogin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ming/demo/web/login/LoginControllerLogin.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/ming/demo/web/userOrders/UserOrderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ming/demo/web/userOrders/UserOrderController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/ming/demo/DemoApplicationTests.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/ming/demo/bean/goods/GoodsIndexBean.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ming/demo/bean/goods/GoodsIndexBean.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ming/demo/bean/order/OrderDetails.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ming/demo/bean/order/OrderDetails.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/ming/demo/interceptor/WebConfigurer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ming/demo/interceptor/WebConfigurer.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/ming/demo/mapper/OrderMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ming/demo/mapper/OrderMapper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/ming/demo/mapper/UserMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ming/demo/mapper/UserMapper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/ming/demo/mapper/admin/AdminGoodsMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ming/demo/mapper/admin/AdminGoodsMapper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/ming/demo/mapper/admin/AdminMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ming/demo/mapper/admin/AdminMapper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/ming/demo/model/Admin.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ming/demo/model/Admin.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/ming/demo/model/Shop.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ming/demo/model/Shop.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ming/demo/mapper/UserAddress/UserAddressMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ming/demo/mapper/UserAddress/UserAddressMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ming/demo/mapper/rider/RiderMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ming/demo/mapper/rider/RiderMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ming/demo/mapper/rider/RidersTakeOrdersMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ming/demo/mapper/rider/RidersTakeOrdersMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ming/demo/model/Rider.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ming/demo/model/Rider.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ming/demo/model/UserAddress.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ming/demo/model/UserAddress.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/ming/demo/service/OrderService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ming/demo/service/OrderService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/ming/demo/service/admin/AdminGoodsServer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ming/demo/service/admin/AdminGoodsServer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/ming/demo/service/admin/AdminServer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ming/demo/service/admin/AdminServer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/ming/demo/service/goods/ProductDetailsService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ming/demo/service/goods/ProductDetailsService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ming/demo/service/rider/RiderService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ming/demo/service/rider/RiderService.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/ming/demo/service/userOrders/UserOrdersService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ming/demo/service/userOrders/UserOrdersService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/ming/demo/web/admin/AdminController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ming/demo/web/admin/AdminController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/ming/demo/web/admin/AdminGoodsController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ming/demo/web/admin/AdminGoodsController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ming/demo/web/login/LoginControllerLogin.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ming/demo/web/login/LoginControllerLogin.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ming/demo/web/rider/RiderController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ming/demo/web/rider/RiderController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ming/demo/web/rider/impl/RiderControllerImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ming/demo/web/rider/impl/RiderControllerImpl.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/ming/demo/web/userOrders/UserOrderController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ming/demo/web/userOrders/UserOrderController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/demo-0.0.1-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/demo-0.0.1-SNAPSHOT.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/demo-0.0.1-SNAPSHOT.jar.original" beforeDir="false" afterPath="$PROJECT_DIR$/target/demo-0.0.1-SNAPSHOT.jar.original" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-com.ming.demo.DemoApplicationTests.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/com.ming.demo.DemoApplicationTests.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/ming/demo/DemoApplicationTests.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -213,7 +171,9 @@
       <workItem from="1590715257026" duration="149000" />
       <workItem from="1590715459043" duration="21000" />
       <workItem from="1590715521193" duration="1507000" />
-      <workItem from="1590799460889" duration="8907000" />
+      <workItem from="1590799460889" duration="16579000" />
+      <workItem from="1590819807060" duration="2541000" />
+      <workItem from="1590825588252" duration="6912000" />
     </task>
     <task id="LOCAL-00001" summary="增加jar包">
       <created>1589420328084</created>
@@ -299,7 +259,14 @@
       <option name="project" value="LOCAL" />
       <updated>1590488574578</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="1. 添加骑手端&#10;2. 添加订单详情页">
+      <created>1590809071282</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1590809071283</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -329,7 +296,8 @@
     <MESSAGE value="1. 用户下单完成。&#10;2. 用户下单库存减一，通过添加redis分布式锁，完成下单，使其成为原子性的操作。&#10;3. 定时任务，通过定时任务quartz，让其15分钟订单自动关闭" />
     <MESSAGE value="1. 完善微信小程序登录功能" />
     <MESSAGE value="1. 完善微信小程序登录功能&#10;2. 添加后台功能" />
-    <option name="LAST_COMMIT_MESSAGE" value="1. 完善微信小程序登录功能&#10;2. 添加后台功能" />
+    <MESSAGE value="1. 添加骑手端&#10;2. 添加订单详情页" />
+    <option name="LAST_COMMIT_MESSAGE" value="1. 添加骑手端&#10;2. 添加订单详情页" />
   </component>
   <component name="WindowStateProjectService">
     <state x="256" y="0" width="476" height="1080" key="#Auto_Import" timestamp="1590130952400">
@@ -344,10 +312,10 @@
       <screen x="0" y="0" width="1858" height="1080" />
     </state>
     <state x="1009" y="298" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1858.1080@0.0.1858.1080" timestamp="1590545566206" />
-    <state x="1254" y="180" key="#com.intellij.ide.util.MemberChooser" timestamp="1590802673403">
+    <state x="1254" y="180" key="#com.intellij.ide.util.MemberChooser" timestamp="1590809279409">
       <screen x="0" y="0" width="1858" height="1080" />
     </state>
-    <state x="1254" y="180" key="#com.intellij.ide.util.MemberChooser/0.0.1858.1080@0.0.1858.1080" timestamp="1590802673403" />
+    <state x="1254" y="180" key="#com.intellij.ide.util.MemberChooser/0.0.1858.1080@0.0.1858.1080" timestamp="1590809279409" />
     <state x="1048" y="352" key="#com.intellij.ide.util.PackageChooserDialog" timestamp="1590563031172">
       <screen x="0" y="0" width="1858" height="1080" />
     </state>
@@ -376,54 +344,54 @@
       <screen x="0" y="0" width="1858" height="1080" />
     </state>
     <state x="1026" y="246" key="FileChooserDialogImpl/0.0.1858.1080@0.0.1858.1080" timestamp="1590715994148" />
-    <state width="1122" height="171" key="GridCell.Tab.0.bottom" timestamp="1590808507339">
+    <state width="1814" height="279" key="GridCell.Tab.0.bottom" timestamp="1590833335540">
       <screen x="0" y="0" width="1858" height="1080" />
     </state>
-    <state width="1122" height="171" key="GridCell.Tab.0.bottom/0.0.1858.1080@0.0.1858.1080" timestamp="1590808507339" />
-    <state width="1122" height="171" key="GridCell.Tab.0.center" timestamp="1590808507339">
+    <state width="1814" height="279" key="GridCell.Tab.0.bottom/0.0.1858.1080@0.0.1858.1080" timestamp="1590833335540" />
+    <state width="1814" height="279" key="GridCell.Tab.0.center" timestamp="1590833335540">
       <screen x="0" y="0" width="1858" height="1080" />
     </state>
-    <state width="1122" height="171" key="GridCell.Tab.0.center/0.0.1858.1080@0.0.1858.1080" timestamp="1590808507339" />
-    <state width="1122" height="171" key="GridCell.Tab.0.left" timestamp="1590808507339">
+    <state width="1814" height="279" key="GridCell.Tab.0.center/0.0.1858.1080@0.0.1858.1080" timestamp="1590833335540" />
+    <state width="1814" height="279" key="GridCell.Tab.0.left" timestamp="1590833335539">
       <screen x="0" y="0" width="1858" height="1080" />
     </state>
-    <state width="1122" height="171" key="GridCell.Tab.0.left/0.0.1858.1080@0.0.1858.1080" timestamp="1590808507339" />
-    <state width="1122" height="171" key="GridCell.Tab.0.right" timestamp="1590808507339">
+    <state width="1814" height="279" key="GridCell.Tab.0.left/0.0.1858.1080@0.0.1858.1080" timestamp="1590833335539" />
+    <state width="1814" height="279" key="GridCell.Tab.0.right" timestamp="1590833335540">
       <screen x="0" y="0" width="1858" height="1080" />
     </state>
-    <state width="1122" height="171" key="GridCell.Tab.0.right/0.0.1858.1080@0.0.1858.1080" timestamp="1590808507339" />
-    <state width="1122" height="171" key="GridCell.Tab.1.bottom" timestamp="1590808507339">
+    <state width="1814" height="279" key="GridCell.Tab.0.right/0.0.1858.1080@0.0.1858.1080" timestamp="1590833335540" />
+    <state width="1814" height="279" key="GridCell.Tab.1.bottom" timestamp="1590833335540">
       <screen x="0" y="0" width="1858" height="1080" />
     </state>
-    <state width="1122" height="171" key="GridCell.Tab.1.bottom/0.0.1858.1080@0.0.1858.1080" timestamp="1590808507339" />
-    <state width="1122" height="171" key="GridCell.Tab.1.center" timestamp="1590808507339">
+    <state width="1814" height="279" key="GridCell.Tab.1.bottom/0.0.1858.1080@0.0.1858.1080" timestamp="1590833335540" />
+    <state width="1814" height="279" key="GridCell.Tab.1.center" timestamp="1590833335540">
       <screen x="0" y="0" width="1858" height="1080" />
     </state>
-    <state width="1122" height="171" key="GridCell.Tab.1.center/0.0.1858.1080@0.0.1858.1080" timestamp="1590808507339" />
-    <state width="1122" height="171" key="GridCell.Tab.1.left" timestamp="1590808507339">
+    <state width="1814" height="279" key="GridCell.Tab.1.center/0.0.1858.1080@0.0.1858.1080" timestamp="1590833335540" />
+    <state width="1814" height="279" key="GridCell.Tab.1.left" timestamp="1590833335540">
       <screen x="0" y="0" width="1858" height="1080" />
     </state>
-    <state width="1122" height="171" key="GridCell.Tab.1.left/0.0.1858.1080@0.0.1858.1080" timestamp="1590808507339" />
-    <state width="1122" height="171" key="GridCell.Tab.1.right" timestamp="1590808507339">
+    <state width="1814" height="279" key="GridCell.Tab.1.left/0.0.1858.1080@0.0.1858.1080" timestamp="1590833335540" />
+    <state width="1814" height="279" key="GridCell.Tab.1.right" timestamp="1590833335540">
       <screen x="0" y="0" width="1858" height="1080" />
     </state>
-    <state width="1122" height="171" key="GridCell.Tab.1.right/0.0.1858.1080@0.0.1858.1080" timestamp="1590808507339" />
-    <state width="1122" height="307" key="GridCell.Tab.2.bottom" timestamp="1590806961649">
+    <state width="1814" height="279" key="GridCell.Tab.1.right/0.0.1858.1080@0.0.1858.1080" timestamp="1590833335540" />
+    <state width="1814" height="488" key="GridCell.Tab.2.bottom" timestamp="1590828461759">
       <screen x="0" y="0" width="1858" height="1080" />
     </state>
-    <state width="1122" height="307" key="GridCell.Tab.2.bottom/0.0.1858.1080@0.0.1858.1080" timestamp="1590806961649" />
-    <state width="1122" height="307" key="GridCell.Tab.2.center" timestamp="1590806961649">
+    <state width="1814" height="488" key="GridCell.Tab.2.bottom/0.0.1858.1080@0.0.1858.1080" timestamp="1590828461759" />
+    <state width="1814" height="488" key="GridCell.Tab.2.center" timestamp="1590828461759">
       <screen x="0" y="0" width="1858" height="1080" />
     </state>
-    <state width="1122" height="307" key="GridCell.Tab.2.center/0.0.1858.1080@0.0.1858.1080" timestamp="1590806961649" />
-    <state width="1122" height="307" key="GridCell.Tab.2.left" timestamp="1590806961648">
+    <state width="1814" height="488" key="GridCell.Tab.2.center/0.0.1858.1080@0.0.1858.1080" timestamp="1590828461759" />
+    <state width="1814" height="488" key="GridCell.Tab.2.left" timestamp="1590828461759">
       <screen x="0" y="0" width="1858" height="1080" />
     </state>
-    <state width="1122" height="307" key="GridCell.Tab.2.left/0.0.1858.1080@0.0.1858.1080" timestamp="1590806961648" />
-    <state width="1122" height="307" key="GridCell.Tab.2.right" timestamp="1590806961649">
+    <state width="1814" height="488" key="GridCell.Tab.2.left/0.0.1858.1080@0.0.1858.1080" timestamp="1590828461759" />
+    <state width="1814" height="488" key="GridCell.Tab.2.right" timestamp="1590828461759">
       <screen x="0" y="0" width="1858" height="1080" />
     </state>
-    <state width="1122" height="307" key="GridCell.Tab.2.right/0.0.1858.1080@0.0.1858.1080" timestamp="1590806961649" />
+    <state width="1814" height="488" key="GridCell.Tab.2.right/0.0.1858.1080@0.0.1858.1080" timestamp="1590828461759" />
     <state x="656" y="157" key="Maven.ArtifactSearchDialog" timestamp="1590390454921">
       <screen x="0" y="0" width="1858" height="1080" />
     </state>
@@ -436,10 +404,10 @@
       <screen x="0" y="0" width="1858" height="1080" />
     </state>
     <state x="656" y="198" key="SettingsEditor/0.0.1858.1080@0.0.1858.1080" timestamp="1590388914324" />
-    <state x="822" y="278" key="Vcs.Push.Dialog.v2" timestamp="1590488591282">
+    <state x="822" y="278" key="Vcs.Push.Dialog.v2" timestamp="1590809227911">
       <screen x="0" y="0" width="1858" height="1080" />
     </state>
-    <state x="822" y="278" key="Vcs.Push.Dialog.v2/0.0.1858.1080@0.0.1858.1080" timestamp="1590488591282" />
+    <state x="822" y="278" key="Vcs.Push.Dialog.v2/0.0.1858.1080@0.0.1858.1080" timestamp="1590809227911" />
     <state x="107" y="120" width="1674" height="894" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog" timestamp="1590464806663">
       <screen x="0" y="0" width="1858" height="1080" />
     </state>
@@ -448,10 +416,10 @@
       <screen x="0" y="0" width="1858" height="1080" />
     </state>
     <state x="631" y="114" width="596" height="852" key="find.popup/0.0.1858.1080@0.0.1858.1080" timestamp="1590542479308" />
-    <state x="510" y="96" key="new project wizard" timestamp="1590715554425">
+    <state x="599" y="71" key="new project wizard" timestamp="1590810001721">
       <screen x="0" y="0" width="1858" height="1080" />
     </state>
-    <state x="510" y="96" key="new project wizard/0.0.1858.1080@0.0.1858.1080" timestamp="1590715554425" />
+    <state x="599" y="71" key="new project wizard/0.0.1858.1080@0.0.1858.1080" timestamp="1590810001721" />
     <state x="1149" y="236" key="run.anything.popup" timestamp="1590646889802">
       <screen x="0" y="0" width="1858" height="1080" />
     </state>
@@ -477,21 +445,6 @@
           <url>file://$PROJECT_DIR$/src/main/java/com/ming/demo/web/rider/impl/RiderControllerImpl.java</url>
           <line>81</line>
           <option name="timeStamp" value="2" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/ming/demo/web/userOrders/UserOrderController.java</url>
-          <line>177</line>
-          <option name="timeStamp" value="5" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/ming/demo/web/userOrders/UserOrderController.java</url>
-          <line>178</line>
-          <option name="timeStamp" value="6" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/ming/demo/web/userOrders/UserOrderController.java</url>
-          <line>179</line>
-          <option name="timeStamp" value="7" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/ming/demo/service/OrderService.java</url>

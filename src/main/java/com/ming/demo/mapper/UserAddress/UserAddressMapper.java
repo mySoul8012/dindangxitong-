@@ -24,7 +24,7 @@ public interface UserAddressMapper {
     public User getUserCoupon(String id);
 
     // 增加地址
-    @Insert("insert into userAddress(usernameId, address, states, remarks, isDefault,phone, sex, label ) values(#{userAddress.usernameId}, #{userAddress.address}, #{userAddress.states}, #{userAddress.remarks}, #{userAddress.isDefault}, #{userAddress.phone}, #{userAddress.sex}, #{userAddress.label})")
+    @Insert("insert into userAddress(usernameId, address, states, remarks, isDefault,phone, sex, label , recipient) values(#{userAddress.usernameId}, #{userAddress.address}, #{userAddress.states}, #{userAddress.remarks}, #{userAddress.isDefault}, #{userAddress.phone}, #{userAddress.sex}, #{userAddress.label}, #{userAddress.recipient})")
     int addInsertAddress(@Param("userAddress") UserAddress userAddress);
 
     // 增加订单

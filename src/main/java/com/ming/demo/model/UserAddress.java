@@ -10,6 +10,16 @@ public class UserAddress {
     private String phone;
     private String sex; // 1 男  2 女
     private String label;   // 标签label
+    // 收件人
+    private String recipient;
+
+    public String getRecipient() {
+        return recipient;
+    }
+
+    public void setRecipient(String recipient) {
+        this.recipient = recipient;
+    }
 
     public String getPhone() {
         return phone;
