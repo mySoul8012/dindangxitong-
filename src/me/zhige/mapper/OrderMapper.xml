@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="me.zhige.dao.OrderMapper" >
+  <resultMap id="BaseResultMap" type="me.zhige.domain.Order" >
+    <id column="id" property="id" jdbcType="INTEGER" />
+    <result column="name" property="name" jdbcType="VARCHAR" />
+    <result column="deliveryAddress" property="deliveryaddress" jdbcType="VARCHAR" />
+    <result column="amount" property="amount" jdbcType="VARCHAR" />
+    <result column="status" property="status" jdbcType="VARCHAR" />
+    <result column="category" property="category" jdbcType="VARCHAR" />
+    <result column="remarks" property="remarks" jdbcType="VARCHAR" />
+    <result column="price" property="price" jdbcType="VARCHAR" />
+    <result column="serviceTime" property="servicetime" jdbcType="VARCHAR" />
+    <result column="serviceHours" property="servicehours" jdbcType="TIMESTAMP" />
+    <result column="orderCreatorId" property="ordercreatorid" jdbcType="VARCHAR" />
+    <result column="shoopId" property="shoopid" jdbcType="INTEGER" />
+    <result column="createTime" property="createtime" jdbcType="TIMESTAMP" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    id, name, deliveryAddress, amount, status, category, remarks, price, serviceTime, 
+    serviceHours, orderCreatorId, shoopId, createTime
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select 
+    <include refid="Base_Column_List" />
+    from order
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from order
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="me.zhige.domain.Order" >
+    insert into order (id, name, deliveryAddress, 
+      amount, status, category, 
+      remarks, price, serviceTime, 
+      serviceHours, orderCreatorId, shoopId, 
+      createTime)
+    values (#{id,jdbcType=INTEGER}, #{name,jdbcType=VARCHAR}, #{deliveryaddress,jdbcType=VARCHAR}, 
+      #{amount,jdbcType=VARCHAR}, #{status,jdbcType=VARCHAR}, #{category,jdbcType=VARCHAR}, 
+      #{remarks,jdbcType=VARCHAR}, #{price,jdbcType=VARCHAR}, #{servicetime,jdbcType=VARCHAR}, 
+      #{servicehours,jdbcType=TIMESTAMP}, #{ordercreatorid,jdbcType=VARCHAR}, #{shoopid,jdbcType=INTEGER}, 
+      #{createtime,jdbcType=TIMESTAMP})
+  </insert>
+  <insert id="insertSelective" parameterType="me.zhige.domain.Order" >
+    insert into order
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        id,
+      </if>
+      <if test="name != null" >
+        name,
+      </if>
+      <if test="deliveryaddress != null" >
+        deliveryAddress,
+      </if>
+      <if test="amount != null" >
+        amount,
+      </if>
+      <if test="status != null" >
+        status,
+      </if>
+      <if test="category != null" >
+        category,
+      </if>
+      <if test="remarks != null" >
+        remarks,
+      </if>
+      <if test="price != null" >
+        price,
+      </if>
+      <if test="servicetime != null" >
+        serviceTime,
+      </if>
+      <if test="servicehours != null" >
+        serviceHours,
+      </if>
+      <if test="ordercreatorid != null" >
+        orderCreatorId,
+      </if>
+      <if test="shoopid != null" >
+        shoopId,
+      </if>
+      <if test="createtime != null" >
+        createTime,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        #{id,jdbcType=INTEGER},
+      </if>
+      <if test="name != null" >
+        #{name,jdbcType=VARCHAR},
+      </if>
+      <if test="deliveryaddress != null" >
+        #{deliveryaddress,jdbcType=VARCHAR},
+      </if>
+      <if test="amount != null" >
+        #{amount,jdbcType=VARCHAR},
+      </if>
+      <if test="status != null" >
+        #{status,jdbcType=VARCHAR},
+      </if>
+      <if test="category != null" >
+        #{category,jdbcType=VARCHAR},
+      </if>
+      <if test="remarks != null" >
+        #{remarks,jdbcType=VARCHAR},
+      </if>
+      <if test="price != null" >
+        #{price,jdbcType=VARCHAR},
+      </if>
+      <if test="servicetime != null" >
+        #{servicetime,jdbcType=VARCHAR},
+      </if>
+      <if test="servicehours != null" >
+        #{servicehours,jdbcType=TIMESTAMP},
+      </if>
+      <if test="ordercreatorid != null" >
+        #{ordercreatorid,jdbcType=VARCHAR},
+      </if>
+      <if test="shoopid != null" >
+        #{shoopid,jdbcType=INTEGER},
+      </if>
+      <if test="createtime != null" >
+        #{createtime,jdbcType=TIMESTAMP},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="me.zhige.domain.Order" >
+    update order
+    <set >
+      <if test="name != null" >
+        name = #{name,jdbcType=VARCHAR},
+      </if>
+      <if test="deliveryaddress != null" >
+        deliveryAddress = #{deliveryaddress,jdbcType=VARCHAR},
+      </if>
+      <if test="amount != null" >
+        amount = #{amount,jdbcType=VARCHAR},
+      </if>
+      <if test="status != null" >
+        status = #{status,jdbcType=VARCHAR},
+      </if>
+      <if test="category != null" >
+        category = #{category,jdbcType=VARCHAR},
+      </if>
+      <if test="remarks != null" >
+        remarks = #{remarks,jdbcType=VARCHAR},
+      </if>
+      <if test="price != null" >
+        price = #{price,jdbcType=VARCHAR},
+      </if>
+      <if test="servicetime != null" >
+        serviceTime = #{servicetime,jdbcType=VARCHAR},
+      </if>
+      <if test="servicehours != null" >
+        serviceHours = #{servicehours,jdbcType=TIMESTAMP},
+      </if>
+      <if test="ordercreatorid != null" >
+        orderCreatorId = #{ordercreatorid,jdbcType=VARCHAR},
+      </if>
+      <if test="shoopid != null" >
+        shoopId = #{shoopid,jdbcType=INTEGER},
+      </if>
+      <if test="createtime != null" >
+        createTime = #{createtime,jdbcType=TIMESTAMP},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="me.zhige.domain.Order" >
+    update order
+    set name = #{name,jdbcType=VARCHAR},
+      deliveryAddress = #{deliveryaddress,jdbcType=VARCHAR},
+      amount = #{amount,jdbcType=VARCHAR},
+      status = #{status,jdbcType=VARCHAR},
+      category = #{category,jdbcType=VARCHAR},
+      remarks = #{remarks,jdbcType=VARCHAR},
+      price = #{price,jdbcType=VARCHAR},
+      serviceTime = #{servicetime,jdbcType=VARCHAR},
+      serviceHours = #{servicehours,jdbcType=TIMESTAMP},
+      orderCreatorId = #{ordercreatorid,jdbcType=VARCHAR},
+      shoopId = #{shoopid,jdbcType=INTEGER},
+      createTime = #{createtime,jdbcType=TIMESTAMP}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+</mapper>

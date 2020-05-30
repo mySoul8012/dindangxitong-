@@ -13,7 +13,8 @@ public class WebConfigurer implements WebMvcConfigurer{
     public void addInterceptors(InterceptorRegistry registry) {
         registry.addInterceptor(new JwtInterceptor()).addPathPatterns("/login/**")
                 .addPathPatterns("/admin/**")
-                .excludePathPatterns("/admin/login")
+                .addPathPatterns("/rider/**")
+                .excludePathPatterns("/admin/index/login")
                 .excludePathPatterns("/login/loginControllerOld")
                 .excludePathPatterns("/login/weichatwxLogin")
                 .excludePathPatterns("/static/**")

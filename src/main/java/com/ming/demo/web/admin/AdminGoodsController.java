@@ -12,7 +12,7 @@ import java.util.List;
 
 // 商品管理界面的增删查改
 @RestController
-@RequestMapping("/admin")
+@RequestMapping("/admin/goods")
 public class AdminGoodsController {
     @Autowired
     private AdminGoodsServer adminGoodsServer;

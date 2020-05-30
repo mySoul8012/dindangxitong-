@@ -64,6 +64,7 @@ public class UserOrdersService {
     public List<com.ming.demo.bean.address.UserAddress> getUserAddress(String id){
         List<UserAddress> userAddresses = userAddressMapper.getUserAddress(id);
         List<com.ming.demo.bean.address.UserAddress> userAddressArrayList= new ArrayList<>();
+        System.out.println(userAddressArrayList.size());
         for (UserAddress userAddress : userAddresses) {
             // 获取全部内容
             int usernameId = userAddress.getUsernameId();

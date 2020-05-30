@@ -1,7 +1,9 @@
 package com.ming.demo.web.userOrders;
 
 import com.ming.demo.bean.Result;
+import com.ming.demo.bean.order.OrderDetails;
 import com.ming.demo.model.*;
+import com.ming.demo.service.OrderService;
 import com.ming.demo.service.userOrders.UserOrdersService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
@@ -17,6 +19,9 @@ import java.util.List;
 public class UserOrderController {
     @Autowired
     private UserOrdersService userOrdersService;
+
+    @Autowired
+    private OrderService orderService;
 
     // 读取默认订单地址
     @RequestMapping("/userAddress")
@@ -149,4 +154,32 @@ public class UserOrderController {
         return userOrdersService.operatings(userId,orderId);
     }
 
+    // 查询订单详情
+    @RequestMapping("/orderDetails")
+    public OrderDetails orderDetails(String orderId){
+        // 查询订单
+        Order order = orderService.findOrder(orderId);
+        // 获取订单地址
+        UserAddress userAddress = orderService.findAllAddress(order.getDeliveryAddress());
+        // 获取商品信息
+        Goods goods = orderService.findGoodsId(order.getShoopId());
+        OrderDetails orderDetails = new OrderDetails();
+        orderDetails.setGoods(goods);
+        orderDetails.setOrder(order);
+        orderDetails.setUserAddress(userAddress);
+        return orderDetails;
+    }
+
+    // 对地址进行修改
+    // 地址修改
+    @RequestMapping("/updateAddress")
+    public Result updateAddress(UserAddress userAddress){
+        Result result = new Result();
+        if(orderService.updateAddress(userAddress)){
+            result.setMsg("succss");
+            return result;
+        }
+        result.setMsg("error");
+        return result;
+    }
 }

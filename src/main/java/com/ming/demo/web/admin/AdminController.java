@@ -14,7 +14,7 @@ import javax.servlet.http.HttpServletResponse;
 
 // 后台管理系统 控制器
 @RestController
-@RequestMapping("/admin")
+@RequestMapping("/admin/index")
 @Api(tags = "后台管理系统控制器")
 public class AdminController {
     @Autowired
