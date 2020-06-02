@@ -34,6 +34,6 @@ public interface OrderMapper {
     @Select("select * from userAddress where id = #{deliveryAddress}")
     UserAddress findAllAddress(String deliveryAddress);
 
-    @Update("update userAddress set usernameId = #{userAddress.usernameId} , address = #{userAddress.address} , states = #{userAddress.states} , remarks = #{userAddress.remarks}, isDefault = #{userAddress.isDefault} , phone = #{userAddress.phone}   , sex = #{userAddress.sex}, label = #{userAddress.label}  where id = #{userAddress.id}")
+    @Update("update userAddress set usernameId = #{userAddress.usernameId} , address = #{userAddress.address} , states = #{userAddress.states} , remarks = #{userAddress.remarks}, isDefault = #{userAddress.isDefault} , phone = #{userAddress.phone}   , sex = #{userAddress.sex}, label = #{userAddress.label} , recipient = #{userAddress.recipient} where id = #{userAddress.id}")
     int updateAddress(@Param("userAddress") UserAddress userAddress);
 }
