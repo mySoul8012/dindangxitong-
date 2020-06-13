@@ -28,7 +28,7 @@ spring:
     static-path-pattern: /static/**
   redis:
     database: 0
-    host: 139.199.225.229
+    host: 47.98.239.206
     port: 6379
     password: 12345678
     timeout: 0
